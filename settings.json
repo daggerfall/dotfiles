@@ -1,0 +1,21 @@
+{
+    "workbench.colorTheme": "Default High Contrast",
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground1": "#ffcc00",
+        // "editorIndentGuide.activeBackground2": "#ff0000",
+        // "editorIndentGuide.activeBackground3": "#a51283",
+        // "editorIndentGuide.activeBackground4": "#ff8c00",
+        // "editorIndentGuide.activeBackground5": "#ffc400",
+        // "editorIndentGuide.activeBackground6": "#ffc400",
+
+            // non-active indent guide colors
+        "editorIndentGuide.background1": "#888888",
+        // "editorIndentGuide.background2": "#00e5ff",
+        // "editorIndentGuide.background3": "#00e5ff",
+        // "editorIndentGuide.background4": "#00e5ff",
+        // "editorIndentGuide.background5": "#00e5ff",
+        // "editorIndentGuide.background6": "#00e5ff"
+    },
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false
+}
