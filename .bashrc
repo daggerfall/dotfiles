@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;33m\]\u\[\033[0m\]@\[\033[1;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -88,8 +89,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -lFh'
-alias la='ls -A'
+alias ll='ls -hlF'
+alias la='ls -la'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -115,24 +116,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/arthur/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/arthur/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/arthur/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/arthur/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-LS_COLORS=$LS_COLORS:'di=0;36'
-export LS_COLORS
 
 . "$HOME/.local/bin/env"
